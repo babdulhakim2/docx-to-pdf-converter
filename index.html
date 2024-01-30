@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Docx to PDF Converter</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Docx to PDF Converter</h1>
+    <p>This simple web application allows you to easily convert DOCX files into PDF format.</p>
+    <h2>How to Convert a DOCX File to PDF</h2>
+    <ol>
+      <li><strong>POST Request:</strong> Make a <code>POST</code> request to the following endpoint:</li>
+    </ol>
+    <pre>
+      POST /convert
+    </pre>
+    <p><strong>Request Body:</strong> Attach the selected DOCX file as the <code>upfile</code> key in the request body. This file will be converted to PDF.</p>
+    <ol start="3">
+      <li><strong>Conversion Process:</strong> After making the <code>POST</code> request, our converter will automatically process the DOCX file and convert it into a PDF file.</li>
+      <li><strong>Download the PDF:</strong> Once the conversion is complete, you will receive the converted PDF file as a response from the server.</li>
+    </ol>
+    <p>Happy converting!</p>
+  </div>
+</body>
+</html>

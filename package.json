@@ -1,0 +1,14 @@
+{
+  "name": "docx-to-pdf",
+  "version": "1.0.0",
+  "description": "converting docx to pdf on POST request",
+  "main": "app.js",
+  "author": "Abdulhakim Bashir",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "docx-pdf": "^0.0.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3"
+  }
+}

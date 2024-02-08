@@ -26,4 +26,7 @@ docker run -p 80:80 -d docx-to-pdf-converter
 
 ```
 
+For building to target x86_64 archtechtures
+docker buildx build --platform linux/amd64,linux/arm64 -t username/repository:tag --push .
+
 

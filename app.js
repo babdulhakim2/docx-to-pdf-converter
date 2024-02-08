@@ -7,7 +7,23 @@ const fs = require('fs');
 const puppeteer = require('puppeteer');
 const mammoth = require('mammoth');
 
-app.use(cors());
+// Specify the allowed origins
+const allowedOrigins = ['http://localhost:3000', 'https://app.rekroot.ai', 'https://rekroot.ai'];
+
+// Configure CORS middleware
+app.use(cors({
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            var msg = 'The CORS policy for this site does not ' +
+                      'allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    }
+}));
+
 app.use(upload());
 
 const extend_pdf = '.pdf';
